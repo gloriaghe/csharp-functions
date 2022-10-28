@@ -15,9 +15,25 @@
 
 }
 
-Console.WriteLine(fattorialeRicorsivo(5));
+Console.WriteLine(fattorialeRicorsivo(4));
 
+int fattorialeFor(int numero)
+{
+    if (numero > 0)
+    {
+        int fattoriale = 1;
+        for (int i = 1; i <= numero; i++)
+        {
+            fattoriale = fattoriale * i;
+        }
+            return fattoriale;
+    }
+    else
+        return 1;
 
+}
+
+Console.WriteLine(fattorialeFor(5));
 
 //2 - La sequenza di fibonacci di un numero
 
