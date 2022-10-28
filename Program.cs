@@ -6,7 +6,7 @@
 //0! = 1 1! = 1 2! = 2 3! = 6 4! = 24 5! = 120 N! = ???
 //    risolverla in modo RICORSIVO o anche in modo ITERATIVO (FOR)
 
- int fattorialeRicorsivo(int numero)
+int fattorialeRicorsivo(int numero)
 {
     if (numero > 0)
         return fattorialeRicorsivo(numero - 1) * numero;
@@ -26,7 +26,7 @@ int fattorialeFor(int numero)
         {
             fattoriale = fattoriale * i;
         }
-            return fattoriale;
+        return fattoriale;
     }
     else
         return 1;
@@ -56,7 +56,7 @@ int fibonacciRicorsivo(int numero)
 {
     if (numero > 2)
         return fibonacciRicorsivo(numero - 1) + fibonacciRicorsivo(numero - 2);
-    else if(numero == 0)
+    else if (numero == 0)
         return 0;
     else
         return 1;
@@ -66,6 +66,31 @@ int fibonacciRicorsivo(int numero)
 Console.WriteLine(fibonacciRicorsivo(10));
 
 
+
+int fibonacciFor(int numero)
+{
+    if (numero > 2)
+    {
+        int numero1 = 1;
+        int numero2 = 1;
+        int fibonacci = 0;
+
+        for (int i = 2; i < numero; i++)
+        {
+            fibonacci = numero1 + numero2;
+            numero1 = numero2;
+            numero2 = fibonacci;
+        }
+        return fibonacci;
+    }
+    else if (numero == 0)
+        return 0;
+    else
+        return 1;
+
+}
+
+Console.WriteLine(fibonacciFor(8));
 
 //BONUS: Convertire le funzioni appena dichiarate in funzioni generiche, ossia funzioni che possono lavorare con array di numeri interi di lunghezza variabile,
 //ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... e così via. A questo punto modificare il programma in modo che chieda
@@ -105,9 +130,9 @@ ChiediNumeri(NumeroUtente);
 // funzione stampa
 void StampaArray(int[] array)
 {
-        Console.Write("[");
+    Console.Write("[");
 
-    for(int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i]);
         Console.Write(",");
@@ -137,7 +162,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 {
     int[] ArrayQuadrato = new int[array.Length];
 
-    for(int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         int numeroModificato = Quadrato(array[i]);
         ArrayQuadrato[i] = numeroModificato;
@@ -153,7 +178,7 @@ int SommaElementiArray(int[] array)
 {
     int somma = 0;
 
-    for(int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         somma += array[i];
     }
