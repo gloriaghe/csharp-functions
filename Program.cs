@@ -1,4 +1,67 @@
 ﻿
+
+//Si chiede di implementare due funzioni che eseguano le corrsipettive funzioni matematiche:
+//1 - Fattoriale di un numero
+//1) il fattoriale di un numero può essere calcolato solo su numeri positivi:
+//0! = 1 1! = 1 2! = 2 3! = 6 4! = 24 5! = 120 N! = ???
+//    risolverla in modo RICORSIVO o anche in modo ITERATIVO (FOR)
+
+ int fattorialeRicorsivo(int numero)
+{
+    if (numero > 0)
+        return fattorialeRicorsivo(numero - 1) * numero;
+    else
+        return 1;
+
+}
+
+Console.WriteLine(fattorialeRicorsivo(5));
+
+
+//int fattorialeFor(int numero)
+//{
+//    int numeroFattoriale = 0;
+
+//    for (int i = 1; i <= numero; i++)
+//    {
+//        numeroFattoriale += numero * ;
+//        Console.WriteLine(numeroFattoriale);
+
+//    }
+//    return numeroFattoriale;
+//}
+
+
+//2 - La sequenza di fibonacci di un numero
+
+//n Fn
+//0	0
+//1	1
+//2	1
+//3	2
+//4	3
+//5	5
+//6	8
+//7	13
+//8	21
+//9	34
+//10	55
+//fibonacci(10) = 55
+//Risolverla in modo RICORSIVO o anche in modo ITERATIVO (FOR)
+
+int fibonacciRicorsivo(int numero)
+{
+    if (numero > 0)
+        return fibonacciRicorsivo(numero - 1) * numero;
+    else
+        return 1;
+
+}
+
+Console.WriteLine(fibonacciRicorsivo(5));
+
+
+
 //BONUS: Convertire le funzioni appena dichiarate in funzioni generiche, ossia funzioni che possono lavorare con array di numeri interi di lunghezza variabile,
 //ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... e così via. A questo punto modificare il programma in modo che chieda
 //all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente.
