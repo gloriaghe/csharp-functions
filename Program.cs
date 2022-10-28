@@ -18,19 +18,6 @@
 Console.WriteLine(fattorialeRicorsivo(5));
 
 
-//int fattorialeFor(int numero)
-//{
-//    int numeroFattoriale = 0;
-
-//    for (int i = 1; i <= numero; i++)
-//    {
-//        numeroFattoriale += numero * ;
-//        Console.WriteLine(numeroFattoriale);
-
-//    }
-//    return numeroFattoriale;
-//}
-
 
 //2 - La sequenza di fibonacci di un numero
 
