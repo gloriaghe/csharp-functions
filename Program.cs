@@ -51,14 +51,22 @@ Console.WriteLine(fattorialeRicorsivo(5));
 
 int fibonacciRicorsivo(int numero)
 {
-    if (numero > 0)
-        return fibonacciRicorsivo(numero - 1) * numero;
+    if (numero > 2)
+    {
+        int numeroMenoUno = fibonacciRicorsivo(numero - 1);
+        int numeroMenoDue = fibonacciRicorsivo(numero - 2);
+
+        return numeroMenoUno + numeroMenoDue;
+
+    }
+    else if(numero == 0)
+        return 0;
     else
         return 1;
 
 }
 
-Console.WriteLine(fibonacciRicorsivo(5));
+Console.WriteLine(fibonacciRicorsivo(10));
 
 
 
